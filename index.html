@@ -331,28 +331,37 @@
 
     <!-- Modern Mobile App Dock -->
     <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 px-4 pb-6 pt-2 pointer-events-none">
-        <div class="glass max-w-sm mx-auto rounded-[2rem] p-2 flex justify-around items-center border border-white/10 shadow-2xl pointer-events-auto">
+        <div class="glass max-w-sm mx-auto rounded-[2.5rem] p-3 flex justify-between items-center border border-white/10 shadow-2xl pointer-events-auto">
             <!-- Home -->
-            <a href="#" class="flex flex-col items-center gap-1 p-2 text-sky-400 group">
-                <span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform">home</span>
-                <span class="text-[9px] uppercase font-bold tracking-tight">Inicio</span>
+            <a href="#" class="flex flex-col items-center gap-1 w-16 group">
+                <span class="material-symbols-outlined text-2xl text-sky-400 group-active:scale-90 transition-transform">home</span>
+                <span class="text-[8px] uppercase font-bold tracking-tighter text-sky-400">Inicio</span>
             </a>
 
             <!-- Call -->
-            <a href="tel:+573174334492" class="flex flex-col items-center gap-1 p-2 text-slate-400 group active:text-white">
-                <span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform">call</span>
-                <span class="text-[9px] uppercase font-bold tracking-tight">Llamar</span>
+            <a href="tel:+573174334492" class="flex flex-col items-center gap-1 w-16 group active:text-white">
+                <span class="material-symbols-outlined text-2xl text-slate-400 group-hover:text-white group-active:scale-90 transition-transform">call</span>
+                <span class="text-[8px] uppercase font-bold tracking-tighter text-slate-400 group-hover:text-white">Llamar</span>
             </a>
             
             <!-- WhatsApp (Main Action) -->
-            <a href="https://wa.me/573174334492" class="flex flex-col items-center justify-center -mt-10 bg-sky-500 w-16 h-16 rounded-full shadow-2xl shadow-sky-500/40 border-4 border-[#050505] text-white transition-transform active:scale-90">
-                <span class="material-symbols-outlined text-2xl">chat</span>
+            <div class="relative w-16 flex justify-center">
+                <a href="https://wa.me/573174334492" class="absolute -top-12 bg-sky-500 w-14 h-14 rounded-full shadow-2xl shadow-sky-500/40 border-4 border-[#050505] flex items-center justify-center text-white transition-transform active:scale-90">
+                    <span class="material-symbols-outlined text-2xl">chat</span>
+                </a>
+                <div class="h-8"></div> <!-- Spacer for dock alignment -->
+            </div>
+
+            <!-- Map -->
+            <a href="#productos" class="flex flex-col items-center gap-1 w-16 group active:text-white">
+                <span class="material-symbols-outlined text-2xl text-slate-400 group-hover:text-white group-active:scale-90 transition-transform">inventory_2</span>
+                <span class="text-[8px] uppercase font-bold tracking-tighter text-slate-400 group-hover:text-white">Productos</span>
             </a>
 
             <!-- Save Contact -->
-            <button onclick="downloadVCF()" class="flex flex-col items-center gap-1 p-2 text-slate-400 group active:text-white">
-                <span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform">person_add</span>
-                <span class="text-[9px] uppercase font-bold tracking-tight">Guardar</span>
+            <button onclick="downloadVCF()" class="flex flex-col items-center gap-1 w-16 group active:text-white">
+                <span class="material-symbols-outlined text-2xl text-slate-400 group-hover:text-white group-active:scale-90 transition-transform">person_add</span>
+                <span class="text-[8px] uppercase font-bold tracking-tighter text-slate-400 group-hover:text-white">Guardar</span>
             </button>
         </div>
     </nav>
